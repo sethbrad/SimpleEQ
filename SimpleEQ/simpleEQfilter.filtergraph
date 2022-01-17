@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <FILTERGRAPH>
-  <FILTER uid="1" x="0.06875000000000001" y="0.1491935483870968">
+  <FILTER uid="1" x="0.64" y="0.2701612903225806">
     <PLUGIN name="Audio Input" descriptiveName="" format="Internal" category="I/O devices"
             manufacturer="JUCE" version="1.0" file="" uniqueId="246006c0"
             isInstrument="0" fileTime="0" infoUpdateTime="0" numInputs="0"
@@ -12,11 +12,11 @@
         <BUS index="0" layout="disabled"/>
       </INPUTS>
       <OUTPUTS>
-        <BUS index="0" layout="L R"/>
+        <BUS index="0" layout="C"/>
       </OUTPUTS>
     </LAYOUT>
   </FILTER>
-  <FILTER uid="2" x="0.6274999999999999" y="0.1491935483870968">
+  <FILTER uid="2" x="0.08" y="0.1391129032258064">
     <PLUGIN name="MIDI Input" descriptiveName="" format="Internal" category="I/O devices"
             manufacturer="JUCE" version="1.0" file="" uniqueId="a9e4f9eb"
             isInstrument="0" fileTime="0" infoUpdateTime="0" numInputs="0"
@@ -34,7 +34,7 @@
   <FILTER uid="3" x="0.6075" y="0.717741935483871">
     <PLUGIN name="Audio Output" descriptiveName="" format="Internal" category="I/O devices"
             manufacturer="JUCE" version="1.0" file="" uniqueId="724248cb"
-            isInstrument="0" fileTime="0" infoUpdateTime="0" numInputs="2"
+            isInstrument="0" fileTime="0" infoUpdateTime="0" numInputs="1"
             numOutputs="0" isShell="0" uid="724248cb"/>
     <STATE>0.</STATE>
     <LAYOUT>
@@ -61,11 +61,11 @@
       </OUTPUTS>
     </LAYOUT>
   </FILTER>
-  <FILTER uid="5" x="0.6274999999999999" y="0.5141129032258065" uiLastX_Normal="87"
-          uiLastY_Normal="423" uiopen_Normal="1">
-    <PLUGIN name="SimpleEQ" format="VST3" category="Fx" manufacturer="yourcompany"
+  <FILTER uid="5" x="0.6675" y="0.5161290322580645" uiLastX_Normal="94"
+          uiLastY_Normal="382" uiopen_Normal="1">
+    <PLUGIN name="SimpleEQ" format="VST3" category="Fx" manufacturer="Seth Inc."
             version="1.0.0" file="C:\Users\Seth Braddock\Documents\Programming\SimpleEQ\SimpleEQ\Builds\VisualStudio2019\x64\Debug\VST3\SimpleEQ.vst3"
-            uniqueId="f566d727" isInstrument="0" fileTime="17e5f793452" infoUpdateTime="17e64ccdc1c"
+            uniqueId="f566d727" isInstrument="0" fileTime="17e651543b6" infoUpdateTime="17e6532cf7f"
             numInputs="2" numOutputs="2" isShell="0" uid="e953fc1c"/>
     <STATE>191.VMjLgXK....O+fWarAhckI2bo8la8HRLt.iHfTlai8FYo41Y8HRUTYTK3HxO9.BOVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9XCLt3hKt3hKt3hKt3hYRUUSTEETIckVwTjQisVTTgkdEYjKAQjYPQSPWgUdMcjKAQjct3hdA4hKt3hKt3hKtnTUv.UQAslXuk0UXoWUFE0YQcEV77RRC8Vav8lak4Fc9vyKVMEUy.Ea0cVZtMEcgQWY9..</STATE>
     <LAYOUT>
@@ -77,22 +77,8 @@
       </OUTPUTS>
     </LAYOUT>
   </FILTER>
-  <FILTER uid="6" x="0.63875" y="0.3225806451612903">
-    <PLUGIN name="AUv3 Synth" format="Internal" category="Synth" manufacturer="JUCE"
-            version="1.0.0" file="AUv3 Synth" uniqueId="e86c6fed" isInstrument="1"
-            fileTime="0" infoUpdateTime="0" numInputs="0" numOutputs="2"
-            isShell="0" uid="e86c6fed"/>
-    <STATE>8..........7C</STATE>
-    <LAYOUT>
-      <INPUTS/>
-      <OUTPUTS>
-        <BUS index="0" layout="L R"/>
-      </OUTPUTS>
-    </LAYOUT>
-  </FILTER>
-  <CONNECTION srcFilter="2" srcChannel="4096" dstFilter="6" dstChannel="4096"/>
+  <CONNECTION srcFilter="1" srcChannel="0" dstFilter="5" dstChannel="0"/>
+  <CONNECTION srcFilter="1" srcChannel="0" dstFilter="5" dstChannel="1"/>
   <CONNECTION srcFilter="5" srcChannel="0" dstFilter="3" dstChannel="0"/>
   <CONNECTION srcFilter="5" srcChannel="1" dstFilter="3" dstChannel="1"/>
-  <CONNECTION srcFilter="6" srcChannel="0" dstFilter="5" dstChannel="0"/>
-  <CONNECTION srcFilter="6" srcChannel="1" dstFilter="5" dstChannel="1"/>
 </FILTERGRAPH>

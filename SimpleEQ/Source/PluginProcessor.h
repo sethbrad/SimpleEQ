@@ -10,6 +10,19 @@
 
 #include <JuceHeader.h>
 
+enum Slope {
+	Slope_12, Slope_24, Slope_36, Slope_48
+};
+
+// easy access for param values
+struct ChainSettings {
+	float peakFreq{ 0 }, peakGaindB{ 0 }, peakQ{ 1.f };
+	float lowCutFreq{ 0 }, highCutFreq{ 0 };
+	int lowCutSlope{ Slope::Slope_12 }, highCutSlope{ Slope::Slope_12 };
+};
+
+ChainSettings getChainSettings(juce::AudioProcessorValueTreeState& apvts);
+
 //==============================================================================
 /**
 */
@@ -67,6 +80,12 @@ private:
 	using MonoChain = juce::dsp::ProcessorChain<CutFilter, Filter, CutFilter>;
 
 	MonoChain leftChain, rightChain;
+
+	enum ChainPositions {
+		LowCut,
+		Peak,
+		HighCut
+	};
 
 	//==============================================================================
 	JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(SimpleEQAudioProcessor)
